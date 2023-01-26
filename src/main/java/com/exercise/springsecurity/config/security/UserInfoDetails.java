@@ -1,4 +1,4 @@
-package com.exercise.springsecurity.config;
+package com.exercise.springsecurity.config.security;
 
 import com.exercise.springsecurity.entity.User;
 import org.springframework.security.core.GrantedAuthority;

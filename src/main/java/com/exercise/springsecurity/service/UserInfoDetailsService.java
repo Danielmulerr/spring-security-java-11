@@ -1,6 +1,6 @@
 package com.exercise.springsecurity.service;
 
-import com.exercise.springsecurity.config.UserInfoDetails;
+import com.exercise.springsecurity.config.security.UserInfoDetails;
 import com.exercise.springsecurity.repository.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

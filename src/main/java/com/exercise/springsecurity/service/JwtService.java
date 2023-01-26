@@ -1,17 +1,22 @@
-package com.exercise.springsecurity.util;
+package com.exercise.springsecurity.service;
 
 import com.exercise.springsecurity.config.properties.Constants;
+import com.exercise.springsecurity.util.TimeUtils;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
-public class JwtUtil {
+@Service
+@Slf4j
+public class JwtService {
     private static final String SECRET = "77217A25432A462D4A614E645267556B58703273357638782F413F4428472B4B";
     private static final int NOW = 0;
 
