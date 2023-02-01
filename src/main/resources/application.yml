@@ -1,3 +1,22 @@
+oauth-credentials:
+  google:
+    client-secret: "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"
+    client-id: "998991197418-2eoh88cagr1e0nscil8ghdc3j1qduj59.apps.googleusercontent.com"
+  github:
+    client-secret: "cf05dbb9fed678865eccf1fa5db6d402b50582e5"
+    client-id: "aa85b41275e669788a7c"
+  microsoft:
+    client-secret: "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"
+    client-id: "998991197418-2eoh88cagr1e0nscil8ghdc3j1qduj59.apps.googleusercontent.com"
+  facebook:
+    client-secret: "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"
+    client-id: "998991197418-2eoh88cagr1e0nscil8ghdc3j1qduj59.apps.googleusercontent.com"
+  twitter:
+    client-secret: "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"
+    client-id: "998991197418-2eoh88cagr1e0nscil8ghdc3j1qduj59.apps.googleusercontent.com"
+  linkedin :
+    client-secret: "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"
+    client-id: "998991197418-2eoh88cagr1e0nscil8ghdc3j1qduj59.apps.googleusercontent.com"
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -10,4 +29,20 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5Dialect
+#  security:
+#    oauth2:
+#      client:
+#        registration:
+#          google:
+#            clientId: "998991197418-2eoh88cagr1e0nscil8ghdc3j1qduj59.apps.googleusercontent.com"
+#            clientSecret: "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"
+#          github:
+#            clientId: aa85b41275e669788a7c
+#            clientSecret: cf05dbb9fed678865eccf1fa5db6d402b50582e5
+#        accessTokenUri: https://github.com/login/oauth/access_token
+#        userAuthenticationUri: https://github.com/login/oauth/authorize
+#        clientAuthenticationForm: form
+#      resource:
+#        user-info-uri: https://api.github.com/user
+#        prefer-token-info: false
 

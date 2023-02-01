@@ -43,6 +43,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
+        /** Jwt based login authentication
+         **/
         httpSecurity.csrf().disable().authorizeRequests()
                 .antMatchers("/user/test-user", "/user/auth").permitAll()
                 .anyRequest()
@@ -50,6 +52,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and().exceptionHandling().and().sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         httpSecurity.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
-    }
 
+
+//for oauth
+//        httpSecurity.csrf().disable().authorizeRequests()
+//                .antMatchers("/user/test-user", "/user/auth").permitAll()
+//                .anyRequest()
+//                .authenticated()
+//                .and().oauth2Login();
+    }
 }

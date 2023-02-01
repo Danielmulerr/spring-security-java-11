@@ -3,17 +3,17 @@ package com.exercise.springsecurity.controller;
 import com.exercise.springsecurity.dto.AuthRequest;
 import com.exercise.springsecurity.dto.UserDto;
 import com.exercise.springsecurity.entity.User;
-import com.exercise.springsecurity.service.UserService;
 import com.exercise.springsecurity.service.JwtService;
+import com.exercise.springsecurity.service.UserService;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.security.Principal;
 
 @RestController
 @RequestMapping("/user")
+
 public class UserController {
     private final JwtService jwtService;
     private final UserService userService;
@@ -42,5 +42,11 @@ public class UserController {
             return jwtService.generateToken(authRequest.getUsername());
         else
             throw new RuntimeException("Unable to login! Please check username and password.");
+    }
+
+    @GetMapping("/user")
+    public Principal user(Principal principal) {
+        System.out.println("Username: " + principal.getName());
+        return principal;
     }
 }

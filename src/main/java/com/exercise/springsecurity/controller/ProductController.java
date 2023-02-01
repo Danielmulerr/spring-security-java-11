@@ -33,4 +33,6 @@ public class ProductController {
     public Product getProduct(@PathVariable int productId) {
         return productService.getProduct(productId);
     }
+
+
 }
